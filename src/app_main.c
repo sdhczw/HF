@@ -272,9 +272,9 @@ static void show_reset_reason(void)
     if(reset_reason&HFSYS_RESET_REASON_SMARTLINK_OK)
     {
         u_printf("RESET FOR SMARTLINK OK\n");
-			  HF_ReadDataFormFlash();
+        HF_ReadDataFormFlash();
         g_struZcConfigDb.struSwitchInfo.u32ServerAddrConfig = 0;			
-			  HF_WriteDataToFlash((u8 *)&g_struZcConfigDb, sizeof(ZC_ConfigDB));
+        HF_WriteDataToFlash((u8 *)&g_struZcConfigDb, sizeof(ZC_ConfigDB));
     }
     if(reset_reason&HFSYS_RESET_REASON_WPS_OK)
     {

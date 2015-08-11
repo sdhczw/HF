@@ -628,8 +628,15 @@ USER_FUNC static void HF_Cloudfunc(void* arg)
         if (PCT_STATE_DISCONNECT_CLOUD == g_struProtocolController.u8MainState)
         {
             close(fd);
-            u32Timer = rand();
-            u32Timer = (PCT_TIMER_INTERVAL_RECONNECT) * (u32Timer % 10 + 1);
+            if (0 == g_struProtocolController.struCloudConnection.u32ConnectionTimes)
+            {
+                u32Timer = 1000;
+            }
+            else
+            {
+                u32Timer = rand();
+                u32Timer = (PCT_TIMER_INTERVAL_RECONNECT) * (u32Timer % 10 + 1);
+            }
             PCT_ReconnectCloud(&g_struProtocolController, u32Timer);
             g_struUartBuffer.u32Status = MSG_BUFFER_IDLE;
             g_struUartBuffer.u32RecvLen = 0;
