@@ -1,0 +1,10 @@
+-I- Waiting ...
+-I- TCL platform : Windows NT
+-I- SAM-BA 2.12  on : windows
+current connection is \USBserial\COM18, \\USBserial\\COM18 to be matched 
+-I- Retrieved arguments from command line :
+-I- argv 0 : \USBserial\COM18
+-I- argv 1 : AT91SAM4S8-EK
+-I- argv 2 : lpb_flash.tcl
+-E- Connection \USBserial\COM18 not found
+-E- Connection list : COM1 COM2 COM3

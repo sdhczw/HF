@@ -1,0 +1,14 @@
+#
+#可以通过SCRIPT字段指定当前使用的脚本；
+#脚本文件一定要放在script目录下面
+#如果没有SCRIPT字段，请把script目录下的脚本手动覆盖调这个脚本
+
+[SYSTEM]
+COM_NUM=1
+MAINWINDOWS=2
+#UserConfig-LPB200_PDT_CMM.dat:LPB-200生产测试写MAC地址通用行脚本
+#UserConfig-LPB_TEST.dat:LPB测试通用脚本
+#UserConfig_A11_PDT_CMM.dat:A11通用生产脚本
+
+SCRIPT=LPB升级写MAC地址脚本.dat
+
