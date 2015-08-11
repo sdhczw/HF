@@ -361,7 +361,7 @@
               <MiscControls>--diag_suppress=494  --c99</MiscControls>
               <Define>__KEIL_MDK__ __LPT200__  ZC_MODULE_VERSION=0 ZC_MODULE_TYPE=1</Define>
               <Undefine></Undefine>
-              <IncludePath>../sdk/1.30/include/;..\src\ZC\inc\aes;..\src\ZC\inc\tropicssl;..\src\ZC\inc\zc;..\src</IncludePath>
+              <IncludePath>../sdk/1.30/include/;..\src\ZC\inc\aes;..\src\ZC\inc\tropicssl;..\src\ZC\inc\zc;..\src;..\src\AC\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -603,6 +603,21 @@
               <FileName>aes_core.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\ZC\src\aes\aes_core.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ac</GroupName>
+          <Files>
+            <File>
+              <FileName>ac_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\AC\src\ac_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>ac_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\AC\src\ac_hal.c</FilePath>
             </File>
           </Files>
         </Group>
