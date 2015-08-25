@@ -325,7 +325,7 @@ static int USER_FUNC uart_recv_callback(uint32_t event,char *data,uint32_t len,u
 
 int USER_FUNC app_main (void)
 {
-	  hfdbg_set_level(10);
+	hfdbg_set_level(10);
     HF_Debug(DEBUG_LEVEL,"sdk version(%s),the app_main start time is %s %s\n",hfsys_get_sdk_version(),__DATE__,__TIME__);
     HF_Debug(DEBUG_LEVEL_USER,"hello hf\n");
     if(hfgpio_fmap_check(module_type)!=0)
