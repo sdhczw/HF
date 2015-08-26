@@ -8,5 +8,6 @@
 *.zip
 *.bak
 *.tmp
+*.lib
 si/*
 !/sdk/1.30/libs.rar
