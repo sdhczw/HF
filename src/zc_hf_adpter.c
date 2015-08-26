@@ -247,10 +247,11 @@ u32 HF_SendDataToMoudle(u8 *pu8Data, u16 u16DataLen)
 *************************************************/
 void HF_Rest(void)
 {
-    hfsmtlk_start();
     
     g_struZcConfigDb.struSwitchInfo.u32ServerAddrConfig = 0;            
     HF_WriteDataToFlash((u8 *)&g_struZcConfigDb, sizeof(ZC_ConfigDB));
+    msleep(500);
+    hfsmtlk_start();
 
 }
 /*************************************************
