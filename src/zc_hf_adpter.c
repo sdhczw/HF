@@ -18,14 +18,6 @@
 #include <ac_cfg.h>
 #include <ac_api.h>
 
-u8  g_u8EqVersion[]={0,0,0,0};      
-u8  g_u8ModuleKey[ZC_MODULE_KEY_LEN] = DEFAULT_IOT_PRIVATE_KEY;
-u64  g_u64Domain = ((((u64)((SUB_DOMAIN_ID & 0xff00) >> 8)) << 48) + (((u64)(SUB_DOMAIN_ID & 0xff)) << 56) + (((u64)MAJOR_DOMAIN_ID & 0xff) << 40) + ((((u64)MAJOR_DOMAIN_ID & 0xff00) >> 8) << 32)
-	+ ((((u64)MAJOR_DOMAIN_ID & 0xff0000) >> 16) << 24)
-	+ ((((u64)MAJOR_DOMAIN_ID & 0xff000000) >> 24) << 16)
-	+ ((((u64)MAJOR_DOMAIN_ID & 0xff00000000) >> 32) << 8)
-	+ ((((u64)MAJOR_DOMAIN_ID & 0xff0000000000) >> 40) << 0));
-u8  g_u8DeviceId[ZC_HS_DEVICE_ID_LEN] = DEVICE_ID;
 
 
 extern PTC_ProtocolCon  g_struProtocolController;
@@ -233,7 +225,13 @@ u32 HF_FirmwareUpdate(u8 *pu8FileData, u32 u32Offset, u32 u32DataLen)
 *************************************************/
 u32 HF_SendDataToMoudle(u8 *pu8Data, u16 u16DataLen)
 {
+#ifdef ZC_MODULE_DEV 
     AC_RecvMessage((ZC_MessageHead *)pu8Data);
+#else
+    u8 u8MagicFlag[4] = {0x02,0x03,0x04,0x05};
+    hfuart_send(HFUART0,(char*)u8MagicFlag,4,1000); 
+    hfuart_send(HFUART0,(char*)pu8Data,u16DataLen,1000); 
+#endif
     return ZC_RET_OK;
 }
 
@@ -352,7 +350,10 @@ USER_FUNC static void HF_CloudRecvfunc(void* arg)
         }
         
         select(u32MaxFd + 1, &fdread, NULL, NULL, &timeout);
-        
+        if(s32ret<=0)
+        {
+           continue; 
+        }
         if ((g_struProtocolController.u8MainState >= PCT_STATE_WAIT_ACCESSRSP) 
         && (g_struProtocolController.u8MainState < PCT_STATE_DISCONNECT_CLOUD))
         {
@@ -716,24 +717,6 @@ void HF_Init()
 void HF_WakeUp()
 {
     PCT_WakeUp();
-    g_struProtocolController.u8MainState = PCT_STATE_ACCESS_NET;
-    {
-        u8 u8Mac[ZC_SERVER_MAC_LEN];
-        memset(g_struRegisterInfo.u8DeviciId, '0', ZC_HS_DEVICE_ID_LEN);
-    	HF_GetMac(u8Mac);
-    	memcpy(g_struRegisterInfo.u8DeviciId + (ZC_HS_DEVICE_ID_LEN - ZC_SERVER_MAC_LEN), u8Mac, ZC_SERVER_MAC_LEN);
-    	memcpy(g_struRegisterInfo.u8PrivateKey, g_u8ModuleKey, ZC_MODULE_KEY_LEN);
-        memcpy(g_struRegisterInfo.u8DeviciId + ZC_HS_DEVICE_ID_LEN, &g_u64Domain, ZC_DOMAIN_LEN);
-        memcpy(g_struRegisterInfo.u8EqVersion, g_u8EqVersion, ZC_EQVERSION_LEN);
-//for test 		
-        g_struZcConfigDb.struSwitchInfo.u32SecSwitch = 0;
-        g_struZcConfigDb.struSwitchInfo.u32TraceSwitch = 0;
-        g_struZcConfigDb.struSwitchInfo.u32WifiConfig = 0;
-        g_struZcConfigDb.struSwitchInfo.u32ServerAddrConfig = 0;
-        g_struZcConfigDb.struSwitchInfo.u32ServerIp =0x3412F7A5; 
-        g_struZcConfigDb.struSwitchInfo.u16ServerPort = ZC_CLOUD_PORT;
-        memcpy(g_struZcConfigDb.struCloudInfo.u8CloudAddr, "test.ablecloud.cn", ZC_CLOUD_ADDR_MAX_LEN);
-    }
 }
 /*************************************************
 * Function: HF_Sleep

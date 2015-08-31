@@ -25,18 +25,6 @@ typedef struct
 #define HF_MAX_SOCKET_LEN    (1000)
 
 
-#ifdef WIFI_ON_MCU
-typedef struct 
-{
-    u8 u8CloudKey[36];
-    u8 u8PrivateKey[112];
-    u8 u8DeviciId[ZC_HS_DEVICE_ID_LEN + ZC_DOMAIN_LEN];
-    u8 u8CloudAddr[20];
-    u8 u8EqVersion[ZC_EQVERSION_LEN];
-    u8 u8TokenKey[16];
-}HF_StaInfo;
-#endif
-
 
 #ifdef __cplusplus
 extern "C" {

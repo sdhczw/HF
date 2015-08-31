@@ -30,7 +30,7 @@
 #include <time.h>
 #include <zc_hf_adpter.h>
 #include <zc_common.h>
-
+#include <ac_hal.h>
 void HF_BcInit(void);
 
 #ifdef __LPT100__
@@ -325,7 +325,7 @@ static int USER_FUNC uart_recv_callback(uint32_t event,char *data,uint32_t len,u
 
 int USER_FUNC app_main (void)
 {
-	  hfdbg_set_level(10);
+	hfdbg_set_level(10);
     HF_Debug(DEBUG_LEVEL,"sdk version(%s),the app_main start time is %s %s\n",hfsys_get_sdk_version(),__DATE__,__TIME__);
     HF_Debug(DEBUG_LEVEL_USER,"hello hf\n");
     if(hfgpio_fmap_check(module_type)!=0)
@@ -343,11 +343,10 @@ int USER_FUNC app_main (void)
     while(!hfnet_wifi_is_active())
     {
         msleep(50);
-    }
-    
+    }    
     HF_Init();
-    HF_ReadDataFormFlash(); 
-
+    HF_ReadDataFormFlash();   
+    
     hfsys_register_system_event( (hfsys_event_callback_t)hfsys_event_callback);
     
     #if 0
