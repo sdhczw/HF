@@ -301,7 +301,7 @@ USER_FUNC static void HF_CloudRecvfunc(void* arg)
     struct timeval timeout; 
     struct sockaddr_in addr;
     int tmp=1;    
-
+    s32 s32ret;
     
     while(1) 
     {
