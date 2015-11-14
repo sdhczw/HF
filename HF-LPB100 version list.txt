@@ -1,0 +1,148 @@
+V1.0.08-04
+1,增加smartlink V7, 加快配网速度和成功率
+2,优化hfflash 接口，减少flash_lock,flash_unlock次数，增加操作速度;
+4,优化smartlink V3
+5,解决网页无法升级大于490KB大小的固件;
+6,  添加计算当前软件版本MD5 AT命令(AT+SMD5),计算模块Flash前400KB的MD5值
+7, 优化lwip协议栈，在网络异常的时候，close可能会出现socket资源释放不了情况
+8, 解决由于更改信号量，TCP长时间跑流会断开问题
+9. 缺省配置使能lwip协议栈中的组播功能
+10. 解决DHCP在多AP条件下地址重新获取出错问题
+11. 增强AP+STA工作时的稳定性
+12. 支持AT+WSSSID中对“=”等特殊字符的支持
+例:特殊字符采用\\+字符的十六进制数据表示
+,: 0x2C	
+=: 0x3D
+?: 0x3F
+测试数据
+发送：AT+WSSSID=DDDDD\\2C\\3D\\3FSSSS			
+查询WSSSID：DDDDD,=?SSSS
+发送：AT+WSKEY=WPA2PSK,AES,DDDDD\\2C\\3D\\3FSSSS
+查询WSKEY：WPA2PSK,AES,DDDDD,=?SSSS
+
+V1.0.08-04
+1,Add support of smartlink V7， speed up the config time
+2,Optimize the hfflash interface， reduce the flash_lock,flash_unlock times, make the flash operation more fast;
+4,Optimize smartlink V3
+5,Resloved the bug the fail to update the firmware via webpage when firmware size exceed 490KB
+6,Add AT+SMD5 to calculate the MD5 value from the module flash address 0 to 400KB.
+7, Optimize the lwip, when network encounter error, close operationg fail to free the socket resources.
+8, Optimize the break of TCP when transfer data for long time test.
+9. Support new feature of multicase.
+10. Fix the reget of DHCP error when there exist much AP.
+11. Enhance the stability of AP+STA.
+12. Suport special character for AT+WSSSID command such as “=”.
+Example：
+,: 0x2C	
+=: 0x3D
+?: 0x3F
+Test data
+Send：AT+WSSSID=DDDDD\\2C\\3D\\3FSSSS			
+QueryWSSSID：DDDDD,=?SSSS
+Send：AT+WSKEY=WPA2PSK,AES,DDDDD\\2C\\3D\\3FSSSS
+QueryWSKEY：WPA2PSK,AES,DDDDD,=?SSSS
+
+
+
+V1.07-08
+1.	工程区分LPB100,LPT100,LPT200；
+2.	更新LPBS2W.sct，新SDK用旧的LPBS2W.scr运行不正常
+3.	提高smartlink兼容性，支持抓40M的包，解决对于有的路由器加密方式为TKIPAES的时候不成功问题
+4.	添加smartlink 抓包API；
+5.	支持微信Airkiss和Smartlink共存
+6.	升级WiFi固件（v9->v10），新增在smartlink过程中beacon包分析，在复杂环境下可以更好查找路由器。注：本次版本仍然可以兼容旧的WiFi固件（V9）
+7.	增加3路PWM复用配置，PWM6:SPI_MISO(pin27), PWM7:SPI_CLK(pin28), PWM8:SPI_MOSI(pin30)
+8.	增加Flash Lock功能，防止在上电过程中可能对Flash的误擦除
+9.	增加API，在socketa作为tcp server时，通过API接口关闭某个客户端(hfnet_socketa_close_client_by_fd,hfnet_socketa_close_client_by_id)
+10.	解决LPB100连接的路由器ssid有多个同时存在，AT+WSCAN的异常问题
+11.	AT+RECV导致重启问题
+12.	修正自定义AT命令的参数长度超过127字节时死循环问题
+13.	修改网页配置模块用户名和密码时，用户名或密码里不能包含有特殊字符（！@#￥%）的问题
+
+v1.0.07-08
+1. Seperated project to LPB100,LPT100,LPT200
+2. Update LPBS2W.sct, old LPBS2W.scr is not compatible with new SDK
+3. Update smartlink compatibility for mobile and router running with 802.11n 40M bandwidth
+4. Update smartlink compatibility with some router running TKIP/AES
+5. Add smartlink APIs for those who want to develop their own smartlink algorithm
+6. Support coexistence of Airkiss and Smartlink
+7. Upgrade WiFi firmware from v9 to v10, add beacon analysis during smartlink to make it easy to find routerin complex environment. Note: new SDK version is also compatiable with old WiFi firmware version, v9
+8. Add addition 3 PWM configuration, PWM6:SPI_MISO(pin27), PWM7:SPI_CLK(pin28), PWM8:SPI_MOSI(pin30)
+9. Add new APIs, hfnet_socketa_close_client_by_fd,hfnet_socketa_close_client_by_id
+10.Resolved AT_WSCAN issues when there are many (>4) same SSID routers around
+11.Resolved eht issue that when using'AT+RECV', it may lead to software reset.
+12.Resolved dead loop issue when the parameter of user defined AT command exceed 127 bytes
+13.Resolved the issue that some special charactors (！@#￥%) are not supported when changing user name/password on web
+
+V1.06-07:
+1, 解决串口误差太多导致无法校准
+2 ,解决ntp 导致资源泄漏;
+3, 解决 pin13脚 API控制异常;
+
+v1.0.06-07
+1. Improve the stability for long term TCP connection, the stability for frequently open/close of TCP connection. 
+2. Improve the stablity when the module running in AP mode
+3. Added defense mechnism for smartlink, it will retry from beginning when failed
+4. Improve the compatibility of WPS
+5. Supported Websocket
+
+
+V1.06-05
+1. TCP稳定性：
+    - 改进TCP长期连接情况下的稳定性，用户建立的TCP可长期保持连接和数据传输
+    - 频繁TCP反复连接断开情况下的稳定性，用户可频繁连接断开TCP连接，TCP每次可以连接成功并传输数据
+2. AP稳定性
+    - AP，AP+STA长期放置情况下可正常工作（出于安全考虑，此时AP应设加密方式）
+3. Smartlink改进
+    - 在失败时，模块会自动重试
+    - 进入smartlink，放置一段时间（如2分钟以上），仍可以工作，不需重启
+4. 模块串口在模块出厂时会校准，保证波特率的准确性
+5. 提高产测软件执行效率
+6. WPS功能改进，增加兼容性
+7. 新增Websocket库（client），可以更好支持云应用
+8. 其他Bug
+
+V1.05-19
+1，模块工作在AP模式，长时间空闲放置，连接AP小概率连不成功问题;
+2, 模块工作在STA模式，长时间空闲放置，模块小概率出现不能正常工作问题;
+3, 大量模块同时上下电，同时去连接同一个路由器，可能会概率出现连接不上问题;
+4, 增加AT+WIFI命令,控制WIFI开关;
+5, 当模块WIFI异常的时候，不再重启模块,可以通过重启WIFI恢复；
+6, 优化TCP/IP协议栈，解决TCP多个连接同时连接问题，不再有创建socket和接收socket数据一定在同一个线程的限制;
+7, 解决模块发送网络数据包（数据部分全0，或者有很多连续0，长度超过512）导致模块死机问题;
+8,优化wps，增强兼容性；
+9、增加AT+WIFI命令，修改AT+RECV命令。
+
+V1.0.04a-29
+1、解决10个模块同时上电连接到同一个Ap，可能有几个连不上问题，解决模块做STA模式的时候，空闲长时间放置会出现模块重启问题.
+
+V1.0.04a-25：
+1,修复放置一段时间后SmartLink配置不成功；
+2,修复模块重启，对于部分TCP server，重启后能够建立连接但是不能发数据问题;
+3,修复思科aironet 1600i系列无法连接问题；
+
+V1.0.04a-23：
+1、去掉UDPLCPT功能，防止升级后没有做reload导致UDP收不到数据；
+2、修复SmartLink log没有带IP问题；
+
+V1.0.04a-21
+1. 修改：smartlink如果周围一个AP也搜不到的情况下，按reload可以重新进入；
+2. 修改：smartlink过程中可能意外重启，修改重启后继续进入smartlink模式；
+3. 改进串口分包；
+4. 修改网页登录名点击3次就会进入的bug；
+5. 修改波特率去掉300；
+6. 支持Firmware8.0 /9.0；
+
+V1.0.04a-17
+1、解决-16版本串口分包的问题。
+
+V1.0.04a-16
+更新说明：
+1， 解决连接极路由重启现象；
+2、增加本地UDP端口设置命令AT+UDPLCPT；例：AT+UDPLCPT=1234,2345将socketA本地端口设置为1234，将socketB的本地端口设置为2345，目标端口仍由NETP、SOCKB设置；
+3、增加流程处理SmartLink Fail情况(配置模块成功，APP显示失败问题)，配合新版APP使用(暂时只有Anadroid版本，增加扫描机制)，提高成功率；
+(注：升级后必须做恢复出厂设置，不然NTP、UDP端口是错误的)
+
+Wi-Fi Firmware V9.0更新记录：
+
+实现N信道抓包，优化SmartLink

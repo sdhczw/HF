@@ -343,7 +343,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>0</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -359,9 +359,9 @@
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls>--diag_suppress=494  --c99</MiscControls>
-              <Define>__KEIL_MDK__ ZC_MODULE_VERSION=0 ZC_MODULE_TYPE=1 __LPB100__</Define>
+              <Define>__KEIL_MDK__ ZC_MODULE_VERSION=0 ZC_MODULE_TYPE=1 __LPB100__ ZC_MODULE_DEV</Define>
               <Undefine></Undefine>
-              <IncludePath>../sdk/1.30/include/;..\src\ZC\inc\\aes;..\src\ZC\inc\tropicssl;..\src\ZC\inc\zc;..\src;..\src\AC\inc</IncludePath>
+              <IncludePath>../sdk/1.50/include/;..\src\ZC\inc\\aes;..\src\ZC\inc\tropicssl;..\src\ZC\inc\zc;..\src;..\src\AC\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -422,7 +422,7 @@
             <File>
               <FileName>LPB100Kernel.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\sdk\1.30\libs\LPB100Kernel.lib</FilePath>
+              <FilePath>..\sdk\1.50\libs\LPB100Kernel.lib</FilePath>
             </File>
           </Files>
         </Group>

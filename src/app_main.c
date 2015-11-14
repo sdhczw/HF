@@ -273,7 +273,8 @@ static void show_reset_reason(void)
     {
         u_printf("RESET FOR SMARTLINK OK\n");
         HF_ReadDataFormFlash();
-        g_struZcConfigDb.struSwitchInfo.u32ServerAddrConfig = 0;			
+        g_struZcConfigDb.struSwitchInfo.u32ServerAddrConfig = 0;
+        g_struZcConfigDb.struDeviceInfo.u32UnBcFlag = 0xFFFFFFFF;        
         HF_WriteDataToFlash((u8 *)&g_struZcConfigDb, sizeof(ZC_ConfigDB));
     }
     if(reset_reason&HFSYS_RESET_REASON_WPS_OK)
@@ -323,6 +324,28 @@ static int USER_FUNC uart_recv_callback(uint32_t event,char *data,uint32_t len,u
     return len; 
 } 
 
+void uart_config(void)
+{
+	char buffer[64];
+    int ret, resetflag = 0;
+	
+	ret = hfat_send_cmd("AT+UART\r\n", sizeof("AT+URAT\r\n"), buffer, 64);
+    if(strcmp(buffer + 4, "115200,8,1,None,NFC") != 0)
+    {
+        ret = hfat_send_cmd("AT+UART=115200,8,1,NONE,NFC,0\r\n", sizeof("AT+UART=115200,8,1,NONE,NFC,0\r\n"), buffer, 64);
+        if(ret != HF_SUCCESS)
+        {
+        	u_printf("Failed to set UART0");
+        }
+        resetflag = 1;
+    }
+
+	if(resetflag == 1)
+    {
+        hfsys_softreset();
+    }
+}
+
 int USER_FUNC app_main (void)
 {
 	hfdbg_set_level(10);
@@ -336,10 +359,9 @@ int USER_FUNC app_main (void)
             msleep(1000);
         }
     }
-    
-    show_reset_reason();
 
-    
+    show_reset_reason();
+    uart_config();
     while(!hfnet_wifi_is_active())
     {
         msleep(50);

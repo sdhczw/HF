@@ -1,0 +1,13 @@
+/projects/output/*
+*.o
+*.d
+*.ko
+*.obj
+*.elf
+*.rar
+*.zip
+*.bak
+*.tmp
+*.lib
+si/*
+!/sdk/1.30/libs.rar

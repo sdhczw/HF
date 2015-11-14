@@ -114,12 +114,14 @@ void USER_FUNC HF_timer_callback(hftimer_handle_t htimer)
     u8 u8TimeId;
     hfthread_mutext_lock(g_struTimermutex);
     u8TimeId = hftimer_get_timer_id(htimer);
+#if 0    
     if (1 == g_struHfTimer[u8TimeId].u32FirstFlag)
     {
         g_struHfTimer[u8TimeId].u32FirstFlag = 0;
         hftimer_start(htimer);
     }
     else
+#endif
     {
         TIMER_TimeoutAction(u8TimeId);
         TIMER_StopTimer(u8TimeId);
@@ -244,13 +246,9 @@ u32 HF_SendDataToMoudle(u8 *pu8Data, u16 u16DataLen)
 * History:
 *************************************************/
 void HF_Rest(void)
-{
-    
-    g_struZcConfigDb.struSwitchInfo.u32ServerAddrConfig = 0;            
-    HF_WriteDataToFlash((u8 *)&g_struZcConfigDb, sizeof(ZC_ConfigDB));
+{   
     msleep(500);
     hfsmtlk_start();
-
 }
 /*************************************************
 * Function: HF_SendTcpData
