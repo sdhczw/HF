@@ -26,7 +26,7 @@ void Timer0Interrupt(void) __attribute__((weak));
 void UsbInterrupt(void) __attribute__((weak));
 void DmaCh0Interrupt(void) __attribute__((weak));
 void DmaCh1Interrupt(void) __attribute__((weak));
-void audio_decoder_interrupt_handler2(void) __attribute__((weak));
+void audio_decoder_interrupt_handler(void) __attribute__((weak));
 void SpisInterrupt(void) __attribute__((weak));
 void SdInterrupt(void) __attribute__((weak));
 void SpimInterrupt(void) __attribute__((weak));
@@ -64,7 +64,7 @@ static void (*const vect_table[])(void) __attribute__((section("EXCEPT_VECTS")))
     UsbInterrupt,				//#23: USB 
     DmaCh0Interrupt,   			//#24: DMA CH0 
     DmaCh1Interrupt,		    //#25: DMA CH1 
-    audio_decoder_interrupt_handler2,      		//26:DECODER 
+    audio_decoder_interrupt_handler,      		//26: DECODER 
     SpisInterrupt,              //#27: SPIS
     SdInterrupt,				//#28: SDIO
     SpimInterrupt,              //#29: SPIM
@@ -300,9 +300,4 @@ void __hf_mem_clear(void)
 		p_data[i]=0;
 	}
 	return;
-}
-
-void audio_decoder_interrupt_handler2(void)
-{
-	u_printf("audio_decoder_interrupt_handler2\n");
 }

@@ -73,6 +73,46 @@ const int hf_gpio_fid_to_pid_map_table[HFM_MAX_FUNC_CODE]=
 	
 	HFM_NOPIN,	//HFGPIO_F_USER_DEFINE
 };
+#elif defined(__LPB105__)
+static int module_type= HFM_TYPE_LPB105;
+const int hf_gpio_fid_to_pid_map_table[HFM_MAX_FUNC_CODE]=
+{
+	HF_M_PIN(2),	//HFGPIO_F_JTAG_TCK
+	HF_M_PIN(3),	//HFGPIO_F_JTAG_TDO
+	HF_M_PIN(4),	//HFGPIO_F_JTAG_TDI
+	HF_M_PIN(5),	//HFGPIO_F_JTAG_TMS
+	HFM_NOPIN,		//HFGPIO_F_USBDP
+	HFM_NOPIN,		//HFGPIO_F_USBDM
+	HF_M_PIN(39),	//HFGPIO_F_UART0_TX
+	HFM_NOPIN,	//HFGPIO_F_UART0_RTS
+	HF_M_PIN(41),	//HFGPIO_F_UART0_RX
+	HFM_NOPIN,	//HFGPIO_F_UART0_CTS
+	
+	HF_M_PIN(27),	//HFGPIO_F_SPI_MISO
+	HF_M_PIN(28),	//HFGPIO_F_SPI_CLK
+	HF_M_PIN(29),	//HFGPIO_F_SPI_CS
+	HF_M_PIN(30),	//HFGPIO_F_SPI_MOSI
+	
+	HFM_NOPIN,	//HFGPIO_F_UART1_TX,
+	HFM_NOPIN,	//HFGPIO_F_UART1_RTS,
+	HFM_NOPIN,	//HFGPIO_F_UART1_RX,
+	HFM_NOPIN,	//HFGPIO_F_UART1_CTS,
+	
+	HF_M_PIN(11),	//HFGPIO_F_NLINK
+	HF_M_PIN(44),	//HFGPIO_F_NREADY
+	HF_M_PIN(45),	//HFGPIO_F_NRELOAD
+	HFM_NOPIN,	//HFGPIO_F_SLEEP_RQ
+	HFM_NOPIN,	//HFGPIO_F_SLEEP_ON
+	
+	HF_M_PIN(18),	//HFGPIO_F_WPS
+	HFM_NOPIN,		//HFGPIO_F_RESERVE1
+	HFM_NOPIN,		//HFGPIO_F_RESERVE2
+	HFM_NOPIN,		//HFGPIO_F_RESERVE3
+	HFM_NOPIN,		//HFGPIO_F_RESERVE4
+	HFM_NOPIN,		//HFGPIO_F_RESERVE5
+	
+	HFM_NOPIN,	//HFGPIO_F_USER_DEFINE
+};
 #elif defined(__LPT200__)
 static int module_type= HFM_TYPE_LPT200;
 const int hf_gpio_fid_to_pid_map_table[HFM_MAX_FUNC_CODE]=
@@ -181,8 +221,8 @@ const int hf_gpio_fid_to_pid_map_table[HFM_MAX_FUNC_CODE]=
 	HF_M_PIN(43),	//HFGPIO_F_NLINK
 	HF_M_PIN(44),	//HFGPIO_F_NREADY
 	HF_M_PIN(45),	//HFGPIO_F_NRELOAD
-	HF_M_PIN(7),	//HFGPIO_F_SLEEP_RQ
-	HF_M_PIN(8),	//HFGPIO_F_SLEEP_ON
+	HFM_NOPIN,//HF_M_PIN(7),	//HFGPIO_F_SLEEP_RQ
+	HFM_NOPIN,//HF_M_PIN(8),	//HFGPIO_F_SLEEP_ON
 		
 	HF_M_PIN(15),		//HFGPIO_F_WPS
 	HFM_NOPIN,		//HFGPIO_F_RESERVE1
@@ -191,7 +231,8 @@ const int hf_gpio_fid_to_pid_map_table[HFM_MAX_FUNC_CODE]=
 	HFM_NOPIN,		//HFGPIO_F_RESERVE4
 	HFM_NOPIN,		//HFGPIO_F_RESERVE5
 	
-	HFM_NOPIN,	//HFGPIO_F_USER_DEFINE
+	HF_M_PIN(7),	//HFGPIO_F_USER_DEFINE
+	HF_M_PIN(8),	//HFGPIO_F_USER_DEFINE+1	
 };
 #else
 #error "invalid project !you must define module type(__LPB100__,__LPT100__,_LPT200__)"
@@ -204,14 +245,16 @@ const hfat_cmd_t user_define_at_cmds_table[]=
 #if 0
 static int USER_FUNC socketa_recv_callback(uint32_t event,char *data,uint32_t len,uint32_t buf_len)
 {
-    if(event==HFNET_SOCKETA_DATA_READY)
-        u_printf("socketa recv %d bytes %d\n",len,buf_len);
-    else if(event==HFNET_SOCKETA_CONNECTED)
-        u_printf("socket a connected!\n");
-    else if(event==HFNET_SOCKETA_DISCONNECTED)
-        u_printf("socket a disconnected!\n");
-    
-    return len;
+	if(event==HFNET_SOCKETA_DATA_READY)
+	{
+		HF_Debug(DEBUG_LEVEL_LOW,"socketa recv %d bytes %d\n",len,buf_len);
+	}
+	else if(event==HFNET_SOCKETA_CONNECTED)
+		u_printf("socket a connected!\n");
+	else if(event==HFNET_SOCKETA_DISCONNECTED)
+		u_printf("socket a disconnected!\n");
+	
+	return len;
 }
 
 static int USER_FUNC socketb_recv_callback(uint32_t event,char *data,uint32_t len,uint32_t buf_len)

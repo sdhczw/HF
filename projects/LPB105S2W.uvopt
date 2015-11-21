@@ -21,7 +21,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>LPBS2W</TargetName>
+    <TargetName>LPB105S2W</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
@@ -238,7 +238,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>256</TopLine>
+      <TopLine>258</TopLine>
       <CurrentLine>291</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\startup.c</PathWithFileName>
@@ -254,7 +254,7 @@
       <Focus>0</Focus>
       <ColumnNumber>24</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>61</TopLine>
+      <TopLine>64</TopLine>
       <CurrentLine>76</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\app_main.c</PathWithFileName>
@@ -302,7 +302,7 @@
       <Focus>0</Focus>
       <ColumnNumber>37</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>269</TopLine>
+      <TopLine>271</TopLine>
       <CurrentLine>272</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\ZC\src\zc\zc_client_manager.c</PathWithFileName>
@@ -318,7 +318,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>170</TopLine>
+      <TopLine>171</TopLine>
       <CurrentLine>172</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\ZC\src\zc\zc_cloud_event.c</PathWithFileName>
@@ -350,7 +350,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>275</TopLine>
+      <TopLine>277</TopLine>
       <CurrentLine>318</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\ZC\src\zc\zc_message_queue.c</PathWithFileName>
@@ -382,7 +382,7 @@
       <Focus>0</Focus>
       <ColumnNumber>1</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>919</TopLine>
+      <TopLine>922</TopLine>
       <CurrentLine>951</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\ZC\src\zc\zc_protocol_controller.c</PathWithFileName>
@@ -630,7 +630,7 @@
       <Focus>0</Focus>
       <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>20</TopLine>
+      <TopLine>22</TopLine>
       <CurrentLine>33</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\ZC\inc\zc\zc_message_queue.h</PathWithFileName>
@@ -790,7 +790,7 @@
       <Focus>0</Focus>
       <ColumnNumber>13</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>177</TopLine>
+      <TopLine>180</TopLine>
       <CurrentLine>201</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\zc_hf_adpter.c</PathWithFileName>

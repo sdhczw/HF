@@ -184,10 +184,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>10</ColumnNumber>
+      <ColumnNumber>24</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>278</TopLine>
-      <CurrentLine>306</CurrentLine>
+      <TopLine>62</TopLine>
+      <CurrentLine>76</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\app_main.c</PathWithFileName>
       <FilenameWithoutPath>app_main.c</FilenameWithoutPath>
@@ -344,10 +344,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>42</ColumnNumber>
+      <ColumnNumber>1</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>926</TopLine>
-      <CurrentLine>927</CurrentLine>
+      <TopLine>920</TopLine>
+      <CurrentLine>951</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\ZC\src\zc\zc_protocol_controller.c</PathWithFileName>
       <FilenameWithoutPath>zc_protocol_controller.c</FilenameWithoutPath>
@@ -424,10 +424,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>1</ColumnNumber>
+      <ColumnNumber>13</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>202</TopLine>
-      <CurrentLine>238</CurrentLine>
+      <TopLine>178</TopLine>
+      <CurrentLine>201</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\src\zc_hf_adpter.c</PathWithFileName>
       <FilenameWithoutPath>zc_hf_adpter.c</FilenameWithoutPath>
@@ -454,7 +454,7 @@
 
   <Group>
     <GroupName>zc_inc</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
