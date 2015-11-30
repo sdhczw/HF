@@ -315,9 +315,10 @@ static void show_reset_reason(void)
     if(reset_reason&HFSYS_RESET_REASON_SMARTLINK_OK)
     {
         u_printf("RESET FOR SMARTLINK OK\n");
-        HF_ReadDataFormFlash();
+        HF_ReadDataFromFlash((u8 *)&g_struZcConfigDb,sizeof(g_struZcConfigDb));
         g_struZcConfigDb.struSwitchInfo.u32ServerAddrConfig = 0;
-        g_struZcConfigDb.struDeviceInfo.u32UnBcFlag = 0xFFFFFFFF;        
+        g_struZcConfigDb.struDeviceInfo.u32UnBcFlag = 0xFFFFFFFF;
+        g_struZcConfigDb.u32Crc = crc16_ccitt(((u8 *)&g_struZcConfigDb) + 4, sizeof(g_struZcConfigDb) - 4);        
         HF_WriteDataToFlash((u8 *)&g_struZcConfigDb, sizeof(ZC_ConfigDB));
     }
     if(reset_reason&HFSYS_RESET_REASON_WPS_OK)
@@ -410,7 +411,6 @@ int USER_FUNC app_main (void)
         msleep(50);
     }    
     HF_Init();
-    HF_ReadDataFormFlash();   
     
     hfsys_register_system_event( (hfsys_event_callback_t)hfsys_event_callback);
     

@@ -17,7 +17,6 @@
 
 typedef struct 
 {
-    u32 u32FirstFlag;
     hftimer_handle_t struHandle;
 }HF_TimerInfo;
 
@@ -32,7 +31,7 @@ extern "C" {
 void HF_Init(void);
 void HF_WakeUp(void);
 void HF_Sleep(void);
-void HF_ReadDataFormFlash(void);
+void HF_ReadDataFromFlash(u8 *pu8Data, u16 u16Len);
 void HF_WriteDataToFlash(u8 *pu8Data, u16 u16Len);
 #ifdef __cplusplus
 }

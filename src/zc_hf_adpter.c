@@ -56,31 +56,13 @@ struct sockaddr_in struRemoteAddr;
 * Parameter: 
 * History:
 *************************************************/
-void HF_ReadDataFormFlash(void) 
+void HF_ReadDataFromFlash(u8 *pu8Data, u16 u16Len) 
 {
-    u32 u32MagicFlag = 0xFFFFFFFF;
 #ifdef __LPT200__
-    hffile_userbin_read(0, (char *)(&u32MagicFlag), 4);
-    if (ZC_MAGIC_FLAG == u32MagicFlag)
-    {   
-        hffile_userbin_read(0, (char *)(&g_struZcConfigDb), sizeof(ZC_ConfigDB));
-    }
-    else
-    {
-        ZC_Printf("no para, use default\n");
-    }
+    hffile_userbin_read(0, (char *)(pu8Data), u16Len);
 #else
-    hfuflash_read(0, (char *)(&u32MagicFlag), 4);
-    if (ZC_MAGIC_FLAG == u32MagicFlag)
-    {   
-        hfuflash_read(0, (char *)(&g_struZcConfigDb), sizeof(ZC_ConfigDB));
-    }
-    else
-    {
-        ZC_Printf("no para, use default\n");
-    }
-#endif    
-
+    hfuflash_read(0, (char *)(pu8Data), u16Len);
+#endif 
 }
 
 /*************************************************
@@ -98,7 +80,7 @@ void HF_WriteDataToFlash(u8 *pu8Data, u16 u16Len)
 #else
     hfuflash_erase_page(0,1); 
     hfuflash_write(0, (char*)pu8Data, u16Len);
-#endif
+#endif 
 }
 
 /*************************************************
@@ -162,7 +144,6 @@ u32 HF_SetTimer(u8 u8Type, u32 u32Interval, u8 *pu8TimeIndex)
         TIMER_AllocateTimer(u8Type, u8TimerIndex, (u8*)&g_struHfTimer[u8TimerIndex]);
         g_struHfTimer[u8TimerIndex].struHandle = hftimer_create(NULL,u32Interval,false,u8TimerIndex,
              HF_timer_callback,0);
-        g_struHfTimer[u8TimerIndex].u32FirstFlag = 1;
         hftimer_start(g_struHfTimer[u8TimerIndex].struHandle);  
         
         *pu8TimeIndex = u8TimerIndex;
@@ -299,7 +280,8 @@ USER_FUNC static void HF_CloudRecvfunc(void* arg)
     struct timeval timeout; 
     struct sockaddr_in addr;
     int tmp=1;    
-    s32 s32ret;
+    s32 s32ret = 0;
+
     
     while(1) 
     {
@@ -347,7 +329,7 @@ USER_FUNC static void HF_CloudRecvfunc(void* arg)
             continue;
         }
         
-        select(u32MaxFd + 1, &fdread, NULL, NULL, &timeout);
+        s32ret = select(u32MaxFd + 1, &fdread, NULL, NULL, &timeout);
         if(s32ret<=0)
         {
            continue; 
@@ -684,6 +666,7 @@ void HF_Init()
     //存储类接口
     g_struHfAdapter.pfunUpdateFinish = HF_FirmwareUpdateFinish;
     g_struHfAdapter.pfunWriteFlash = HF_WriteDataToFlash;
+    g_struHfAdapter.pfunReadFlash = HF_ReadDataFromFlash;
     //系统类接口    
     g_struHfAdapter.pfunRest = HF_Rest;    
     g_struHfAdapter.pfunGetMac = HF_GetMac;
