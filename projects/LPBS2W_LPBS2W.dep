@@ -1,228 +1,229 @@
 Dependencies for Project 'LPBS2W', Target 'LPBS2W': (DO NOT MODIFY !)
-F (..\src\startup.c)(0x5650256A)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\startup.o --list_dir ".\\output\\" --list --omf_browse .\output\startup.crf --depend .\output\startup.d)
-I (../sdk/1.50/include/hsf.h)(0x56406D63)
-I (../sdk/1.50/include/hfconfig.h)(0x56406D63)
-I (../sdk/1.50/include/hftypes.h)(0x56406D63)
+F (..\src\startup.c)(0x567397C0)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\startup.o --list_dir ".\\output\\" --list --omf_browse .\output\startup.crf --depend .\output\startup.d)
+I (../sdk/1.50/include/hsf.h)(0x567397C0)
+I (../sdk/1.50/include/hfconfig.h)(0x567397BF)
+I (../sdk/1.50/include/hftypes.h)(0x567397C0)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (../sdk/1.50/include/hfsys.h)(0x56406D63)
-I (../sdk/1.50/include/hferrno.h)(0x56406D62)
-I (../sdk/1.50/include/hf_debug.h)(0x56406D63)
-I (../sdk/1.50/include/hfat.h)(0x56406D63)
-I (../sdk/1.50/include/hfgpio.h)(0x56406D62)
-I (../sdk/1.50/include/hfspi.h)(0x56406D63)
-I (../sdk/1.50/include/hfthread.h)(0x56406D63)
-I (../sdk/1.50/include/hfnet.h)(0x56406D62)
-I (../sdk/1.50/include/lwip/sockets.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/opt.h)(0x56406D63)
-I (../sdk/1.50/include/lwipopts.h)(0x56406D63)
-I (../sdk/1.50/include/conf_lwip_threads.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/debug.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/arch.h)(0x56406D63)
-I (../sdk/1.50/include/arch/cc.h)(0x56406D63)
+I (../sdk/1.50/include/hfsys.h)(0x567397C0)
+I (../sdk/1.50/include/hferrno.h)(0x567397BF)
+I (../sdk/1.50/include/hf_debug.h)(0x567397BF)
+I (../sdk/1.50/include/hfat.h)(0x567397BF)
+I (../sdk/1.50/include/hfgpio.h)(0x567397BF)
+I (../sdk/1.50/include/hfspi.h)(0x567397BF)
+I (../sdk/1.50/include/hfthread.h)(0x567397C0)
+I (../sdk/1.50/include/hfnet.h)(0x567397BF)
+I (../sdk/1.50/include/lwip/sockets.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/opt.h)(0x567397C0)
+I (../sdk/1.50/include/lwipopts.h)(0x567397C0)
+I (../sdk/1.50/include/conf_lwip_threads.h)(0x567397BF)
+I (../sdk/1.50/include/lwip/debug.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/arch.h)(0x567397C0)
+I (../sdk/1.50/include/arch/cc.h)(0x567397BF)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x52FDD27E)
-I (../sdk/1.50/include/lwip/ip_addr.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/def.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/inet.h)(0x56406D63)
-I (../sdk/1.50/include/httpc/httpc.h)(0x56406D63)
+I (../sdk/1.50/include/lwip/ip_addr.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/def.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/inet.h)(0x567397C0)
+I (../sdk/1.50/include/httpc/httpc.h)(0x567397C0)
 I (d:\Keil_v5\ARM\ARMCC\include\time.h)(0x52FDD27E)
-I (../sdk/1.50/include/hfuart.h)(0x56406D62)
-I (../sdk/1.50/include/hfusb.h)(0x56406D62)
-I (../sdk/1.50/include/hftimer.h)(0x56406D62)
-I (../sdk/1.50/include/hftime.h)(0x56406D63)
-I (../sdk/1.50/include/hffile.h)(0x56406D62)
-I (../sdk/1.50/include/hfupdate.h)(0x56406D62)
-I (../sdk/1.50/include/hfflash.h)(0x56406D62)
-I (../sdk/1.50/include/hfflashlayout.h)(0x56406D63)
-I (../sdk/1.50/include/hfir.h)(0x56406D63)
-I (../sdk/1.50/include/hfwifi.h)(0x56406D63)
-I (../sdk/1.50/include/hfsmtlk.h)(0x56406D63)
-F (..\src\app_main.c)(0x56542BF4)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\app_main.o --list_dir ".\\output\\" --list --omf_browse .\output\app_main.crf --depend .\output\app_main.d)
-I (../sdk/1.50/include/hsf.h)(0x56406D63)
-I (../sdk/1.50/include/hfconfig.h)(0x56406D63)
-I (../sdk/1.50/include/hftypes.h)(0x56406D63)
+I (../sdk/1.50/include/hfuart.h)(0x567397C0)
+I (../sdk/1.50/include/hfusb.h)(0x567397C0)
+I (../sdk/1.50/include/hftimer.h)(0x567397C0)
+I (../sdk/1.50/include/hftime.h)(0x567397C0)
+I (../sdk/1.50/include/hffile.h)(0x567397BF)
+I (../sdk/1.50/include/hfupdate.h)(0x567397C0)
+I (../sdk/1.50/include/hfflash.h)(0x567397BF)
+I (../sdk/1.50/include/hfflashlayout.h)(0x567397BF)
+I (../sdk/1.50/include/hfir.h)(0x567397BF)
+I (../sdk/1.50/include/hfwifi.h)(0x567397C0)
+I (../sdk/1.50/include/hfsmtlk.h)(0x567397BF)
+F (..\src\app_main.c)(0x5677F673)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\app_main.o --list_dir ".\\output\\" --list --omf_browse .\output\app_main.crf --depend .\output\app_main.d)
+I (../sdk/1.50/include/hsf.h)(0x567397C0)
+I (../sdk/1.50/include/hfconfig.h)(0x567397BF)
+I (../sdk/1.50/include/hftypes.h)(0x567397C0)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (../sdk/1.50/include/hfsys.h)(0x56406D63)
-I (../sdk/1.50/include/hferrno.h)(0x56406D62)
-I (../sdk/1.50/include/hf_debug.h)(0x56406D63)
-I (../sdk/1.50/include/hfat.h)(0x56406D63)
-I (../sdk/1.50/include/hfgpio.h)(0x56406D62)
-I (../sdk/1.50/include/hfspi.h)(0x56406D63)
-I (../sdk/1.50/include/hfthread.h)(0x56406D63)
-I (../sdk/1.50/include/hfnet.h)(0x56406D62)
-I (../sdk/1.50/include/lwip/sockets.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/opt.h)(0x56406D63)
-I (../sdk/1.50/include/lwipopts.h)(0x56406D63)
-I (../sdk/1.50/include/conf_lwip_threads.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/debug.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/arch.h)(0x56406D63)
-I (../sdk/1.50/include/arch/cc.h)(0x56406D63)
+I (../sdk/1.50/include/hfsys.h)(0x567397C0)
+I (../sdk/1.50/include/hferrno.h)(0x567397BF)
+I (../sdk/1.50/include/hf_debug.h)(0x567397BF)
+I (../sdk/1.50/include/hfat.h)(0x567397BF)
+I (../sdk/1.50/include/hfgpio.h)(0x567397BF)
+I (../sdk/1.50/include/hfspi.h)(0x567397BF)
+I (../sdk/1.50/include/hfthread.h)(0x567397C0)
+I (../sdk/1.50/include/hfnet.h)(0x567397BF)
+I (../sdk/1.50/include/lwip/sockets.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/opt.h)(0x567397C0)
+I (../sdk/1.50/include/lwipopts.h)(0x567397C0)
+I (../sdk/1.50/include/conf_lwip_threads.h)(0x567397BF)
+I (../sdk/1.50/include/lwip/debug.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/arch.h)(0x567397C0)
+I (../sdk/1.50/include/arch/cc.h)(0x567397BF)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x52FDD27E)
-I (../sdk/1.50/include/lwip/ip_addr.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/def.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/inet.h)(0x56406D63)
-I (../sdk/1.50/include/httpc/httpc.h)(0x56406D63)
+I (../sdk/1.50/include/lwip/ip_addr.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/def.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/inet.h)(0x567397C0)
+I (../sdk/1.50/include/httpc/httpc.h)(0x567397C0)
 I (d:\Keil_v5\ARM\ARMCC\include\time.h)(0x52FDD27E)
-I (../sdk/1.50/include/hfuart.h)(0x56406D62)
-I (../sdk/1.50/include/hfusb.h)(0x56406D62)
-I (../sdk/1.50/include/hftimer.h)(0x56406D62)
-I (../sdk/1.50/include/hftime.h)(0x56406D63)
-I (../sdk/1.50/include/hffile.h)(0x56406D62)
-I (../sdk/1.50/include/hfupdate.h)(0x56406D62)
-I (../sdk/1.50/include/hfflash.h)(0x56406D62)
-I (../sdk/1.50/include/hfflashlayout.h)(0x56406D63)
-I (../sdk/1.50/include/hfir.h)(0x56406D63)
-I (../sdk/1.50/include/hfwifi.h)(0x56406D63)
-I (../sdk/1.50/include/hfsmtlk.h)(0x56406D63)
+I (../sdk/1.50/include/hfuart.h)(0x567397C0)
+I (../sdk/1.50/include/hfusb.h)(0x567397C0)
+I (../sdk/1.50/include/hftimer.h)(0x567397C0)
+I (../sdk/1.50/include/hftime.h)(0x567397C0)
+I (../sdk/1.50/include/hffile.h)(0x567397BF)
+I (../sdk/1.50/include/hfupdate.h)(0x567397C0)
+I (../sdk/1.50/include/hfflash.h)(0x567397BF)
+I (../sdk/1.50/include/hfflashlayout.h)(0x567397BF)
+I (../sdk/1.50/include/hfir.h)(0x567397BF)
+I (../sdk/1.50/include/hfwifi.h)(0x567397C0)
+I (../sdk/1.50/include/hfsmtlk.h)(0x567397BF)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
-I (..\src\zc_hf_adpter.h)(0x5652CE55)
+I (..\src\zc_hf_adpter.h)(0x567397C0)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_interface.h)(0x55F6A3D1)
-I (..\src\AC\inc\ac_hal.h)(0x55E3D3F5)
-I (..\src\AC\inc\ac_api.h)(0x5646AC6A)
+I (..\src\AC\inc\ac_hal.h)(0x5677F475)
+I (..\src\AC\inc\ac_api.h)(0x5677E314)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
 F (..\sdk\1.50\libs\LPB100Kernel.lib)(0x56406D6C)()
-F (..\src\ZC\src\zc\zc_client_manager.c)(0x55FCFF7E)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_client_manager.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_client_manager.crf --depend .\output\zc_client_manager.d)
+F (..\src\ZC\src\zc\zc_client_manager.c)(0x55FCFF7E)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_client_manager.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_client_manager.crf --depend .\output\zc_client_manager.d)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
-F (..\src\ZC\src\zc\zc_cloud_event.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_cloud_event.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_cloud_event.crf --depend .\output\zc_cloud_event.d)
+F (..\src\ZC\src\zc\zc_cloud_event.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_cloud_event.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_cloud_event.crf --depend .\output\zc_cloud_event.d)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
-F (..\src\ZC\src\zc\zc_common.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_common.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_common.crf --depend .\output\zc_common.d)
+F (..\src\ZC\src\zc\zc_common.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_common.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_common.crf --depend .\output\zc_common.d)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
-F (..\src\ZC\src\zc\zc_message_queue.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_message_queue.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_message_queue.crf --depend .\output\zc_message_queue.d)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+F (..\src\ZC\src\zc\zc_message_queue.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_message_queue.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_message_queue.crf --depend .\output\zc_message_queue.d)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
-F (..\src\ZC\src\zc\zc_moudle_manager.c)(0x5646AAFB)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_moudle_manager.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_moudle_manager.crf --depend .\output\zc_moudle_manager.d)
+F (..\src\ZC\src\zc\zc_moudle_manager.c)(0x5646AAFB)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_moudle_manager.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_moudle_manager.crf --depend .\output\zc_moudle_manager.d)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_interface.h)(0x55F6A3D1)
-F (..\src\ZC\src\zc\zc_protocol_controller.c)(0x5652E2B3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_protocol_controller.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_protocol_controller.crf --depend .\output\zc_protocol_controller.d)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
+F (..\src\ZC\src\zc\zc_protocol_controller.c)(0x5677C194)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_protocol_controller.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_protocol_controller.crf --depend .\output\zc_protocol_controller.d)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
-F (..\src\ZC\src\zc\zc_sec_engine.c)(0x55E53DD7)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_sec_engine.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_sec_engine.crf --depend .\output\zc_sec_engine.d)
+F (..\src\ZC\src\zc\zc_sec_engine.c)(0x55E53DD7)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_sec_engine.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_sec_engine.crf --depend .\output\zc_sec_engine.d)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
-F (..\src\ZC\src\zc\zc_timer.c)(0x56389F52)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_timer.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_timer.crf --depend .\output\zc_timer.d)
+F (..\src\ZC\src\zc\zc_timer.c)(0x56389F52)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_timer.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_timer.crf --depend .\output\zc_timer.d)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
-F (..\src\ZC\src\tropicssl\bignum.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\bignum.o --list_dir ".\\output\\" --list --omf_browse .\output\bignum.crf --depend .\output\bignum.d)
+F (..\src\ZC\src\tropicssl\bignum.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\bignum.o --list_dir ".\\output\\" --list --omf_browse .\output\bignum.crf --depend .\output\bignum.d)
 I (..\src\ZC\inc\tropicssl\secconfig.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bn_mul.h)(0x55E53DD7)
@@ -230,7 +231,7 @@ I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-F (..\src\ZC\src\tropicssl\rsa.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\rsa.o --list_dir ".\\output\\" --list --omf_browse .\output\rsa.crf --depend .\output\rsa.d)
+F (..\src\ZC\src\tropicssl\rsa.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\rsa.o --list_dir ".\\output\\" --list --omf_browse .\output\rsa.crf --depend .\output\rsa.d)
 I (..\src\ZC\inc\tropicssl\secconfig.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
@@ -238,31 +239,31 @@ I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-F (..\src\ZC\src\zc\zc_bc.c)(0x5645E8DB)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_bc.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_bc.crf --depend .\output\zc_bc.d)
+F (..\src\ZC\src\zc\zc_bc.c)(0x5645E8DB)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_bc.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_bc.crf --depend .\output\zc_bc.d)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
-F (..\src\ZC\src\zc\zc_configuration.c)(0x5652D701)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_configuration.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_configuration.crf --depend .\output\zc_configuration.d)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
+F (..\src\ZC\src\zc\zc_configuration.c)(0x56739869)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_configuration.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_configuration.crf --depend .\output\zc_configuration.d)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
@@ -270,7 +271,7 @@ I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
-F (..\src\ZC\src\crc\crc.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\crc.o --list_dir ".\\output\\" --list --omf_browse .\output\crc.crf --depend .\output\crc.d)
+F (..\src\ZC\src\crc\crc.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\crc.o --list_dir ".\\output\\" --list --omf_browse .\output\crc.crf --depend .\output\crc.d)
 F (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)()
 F (..\src\ZC\inc\tropicssl\bn_mul.h)(0x55E53DD7)()
 F (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)()
@@ -278,106 +279,119 @@ F (..\src\ZC\inc\tropicssl\secconfig.h)(0x55C997E3)()
 F (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)()
 F (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)()
 F (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)()
-F (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)()
+F (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)()
 F (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)()
 F (..\src\ZC\inc\zc\zc_module_interface.h)(0x55F6A3D1)()
-F (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)()
-F (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)()
+F (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)()
+F (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)()
 F (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)()
 F (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)()
-F (..\src\ZC\src\aes\aes_cbc.c)(0x55FCFEBE)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\aes_cbc.o --list_dir ".\\output\\" --list --omf_browse .\output\aes_cbc.crf --depend .\output\aes_cbc.d)
+F (..\src\ZC\src\aes\aes_cbc.c)(0x55FCFEBE)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\aes_cbc.o --list_dir ".\\output\\" --list --omf_browse .\output\aes_cbc.crf --depend .\output\aes_cbc.d)
 I (d:\Keil_v5\ARM\ARMCC\include\assert.h)(0x52FDD27E)
 I (..\src\ZC\inc\\aes\aes.h)(0x55C997E3)
 I (..\src\ZC\inc\\aes\aes_locl.h)(0x55C997E3)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
-F (..\src\ZC\src\aes\aes_core.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\aes_core.o --list_dir ".\\output\\" --list --omf_browse .\output\aes_core.crf --depend .\output\aes_core.d)
+F (..\src\ZC\src\aes\aes_core.c)(0x55C997E3)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\aes_core.o --list_dir ".\\output\\" --list --omf_browse .\output\aes_core.crf --depend .\output\aes_core.d)
 I (d:\Keil_v5\ARM\ARMCC\include\assert.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
 I (..\src\ZC\inc\\aes\aes.h)(0x55C997E3)
 I (..\src\ZC\inc\\aes\aes_locl.h)(0x55C997E3)
-F (..\src\zc_hf_adpter.c)(0x5652E432)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\zc_hf_adpter.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_hf_adpter.crf --depend .\output\zc_hf_adpter.d)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
+F (..\src\zc_hf_adpter.c)(0x5677E578)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\zc_hf_adpter.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_hf_adpter.crf --depend .\output\zc_hf_adpter.d)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_interface.h)(0x55F6A3D1)
-I (../sdk/1.50/include/hsf.h)(0x56406D63)
-I (../sdk/1.50/include/hfconfig.h)(0x56406D63)
-I (../sdk/1.50/include/hftypes.h)(0x56406D63)
+I (../sdk/1.50/include/hsf.h)(0x567397C0)
+I (../sdk/1.50/include/hfconfig.h)(0x567397BF)
+I (../sdk/1.50/include/hftypes.h)(0x567397C0)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (../sdk/1.50/include/hfsys.h)(0x56406D63)
-I (../sdk/1.50/include/hferrno.h)(0x56406D62)
-I (../sdk/1.50/include/hf_debug.h)(0x56406D63)
-I (../sdk/1.50/include/hfat.h)(0x56406D63)
-I (../sdk/1.50/include/hfgpio.h)(0x56406D62)
-I (../sdk/1.50/include/hfspi.h)(0x56406D63)
-I (../sdk/1.50/include/hfthread.h)(0x56406D63)
-I (../sdk/1.50/include/hfnet.h)(0x56406D62)
-I (../sdk/1.50/include/lwip/sockets.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/opt.h)(0x56406D63)
-I (../sdk/1.50/include/lwipopts.h)(0x56406D63)
-I (../sdk/1.50/include/conf_lwip_threads.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/debug.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/arch.h)(0x56406D63)
-I (../sdk/1.50/include/arch/cc.h)(0x56406D63)
+I (../sdk/1.50/include/hfsys.h)(0x567397C0)
+I (../sdk/1.50/include/hferrno.h)(0x567397BF)
+I (../sdk/1.50/include/hf_debug.h)(0x567397BF)
+I (../sdk/1.50/include/hfat.h)(0x567397BF)
+I (../sdk/1.50/include/hfgpio.h)(0x567397BF)
+I (../sdk/1.50/include/hfspi.h)(0x567397BF)
+I (../sdk/1.50/include/hfthread.h)(0x567397C0)
+I (../sdk/1.50/include/hfnet.h)(0x567397BF)
+I (../sdk/1.50/include/lwip/sockets.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/opt.h)(0x567397C0)
+I (../sdk/1.50/include/lwipopts.h)(0x567397C0)
+I (../sdk/1.50/include/conf_lwip_threads.h)(0x567397BF)
+I (../sdk/1.50/include/lwip/debug.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/arch.h)(0x567397C0)
+I (../sdk/1.50/include/arch/cc.h)(0x567397BF)
 I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x52FDD27E)
-I (../sdk/1.50/include/lwip/ip_addr.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/def.h)(0x56406D63)
-I (../sdk/1.50/include/lwip/inet.h)(0x56406D63)
-I (../sdk/1.50/include/httpc/httpc.h)(0x56406D63)
+I (../sdk/1.50/include/lwip/ip_addr.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/def.h)(0x567397C0)
+I (../sdk/1.50/include/lwip/inet.h)(0x567397C0)
+I (../sdk/1.50/include/httpc/httpc.h)(0x567397C0)
 I (d:\Keil_v5\ARM\ARMCC\include\time.h)(0x52FDD27E)
-I (../sdk/1.50/include/hfuart.h)(0x56406D62)
-I (../sdk/1.50/include/hfusb.h)(0x56406D62)
-I (../sdk/1.50/include/hftimer.h)(0x56406D62)
-I (../sdk/1.50/include/hftime.h)(0x56406D63)
-I (../sdk/1.50/include/hffile.h)(0x56406D62)
-I (../sdk/1.50/include/hfupdate.h)(0x56406D62)
-I (../sdk/1.50/include/hfflash.h)(0x56406D62)
-I (../sdk/1.50/include/hfflashlayout.h)(0x56406D63)
-I (../sdk/1.50/include/hfir.h)(0x56406D63)
-I (../sdk/1.50/include/hfwifi.h)(0x56406D63)
-I (../sdk/1.50/include/hfsmtlk.h)(0x56406D63)
-I (..\src\zc_hf_adpter.h)(0x5652CE55)
+I (../sdk/1.50/include/hfuart.h)(0x567397C0)
+I (../sdk/1.50/include/hfusb.h)(0x567397C0)
+I (../sdk/1.50/include/hftimer.h)(0x567397C0)
+I (../sdk/1.50/include/hftime.h)(0x567397C0)
+I (../sdk/1.50/include/hffile.h)(0x567397BF)
+I (../sdk/1.50/include/hfupdate.h)(0x567397C0)
+I (../sdk/1.50/include/hfflash.h)(0x567397BF)
+I (../sdk/1.50/include/hfflashlayout.h)(0x567397BF)
+I (../sdk/1.50/include/hfir.h)(0x567397BF)
+I (../sdk/1.50/include/hfwifi.h)(0x567397C0)
+I (../sdk/1.50/include/hfsmtlk.h)(0x567397BF)
+I (..\src\zc_hf_adpter.h)(0x567397C0)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x52FDD27E)
-I (..\src\AC\inc\ac_cfg.h)(0x55F02A39)
-I (..\src\AC\inc\ac_api.h)(0x5646AC6A)
-F (..\src\AC\src\ac_api.c)(0x5646D6EE)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\ac_api.o --list_dir ".\\output\\" --list --omf_browse .\output\ac_api.crf --depend .\output\ac_api.d)
+I (..\src\AC\inc\ac_cfg.h)(0x5677C221)
+I (..\src\AC\inc\ac_api.h)(0x5677E314)
+F (..\src\AC\src\ac_api.c)(0x5677F4C9)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\ac_api.o --list_dir ".\\output\\" --list --omf_browse .\output\ac_api.crf --depend .\output\ac_api.d)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5652CF95)
-I (..\src\ZC\inc\zc\zc_message_queue.h)(0x5646CAD7)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
 I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
 I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
-I (..\src\ZC\inc\zc\zc_configuration.h)(0x5652C541)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
-I (..\src\AC\inc\ac_hal.h)(0x55E3D3F5)
-I (..\src\AC\inc\ac_api.h)(0x5646AC6A)
+I (..\src\AC\inc\ac_hal.h)(0x5677F475)
+I (..\src\AC\inc\ac_api.h)(0x5677E314)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
 I (..\src\ZC\inc\zc\zc_module_interface.h)(0x55F6A3D1)
-F (..\src\AC\src\ac_hal.c)(0x5646AC78)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -o .\output\ac_hal.o --list_dir ".\\output\\" --list --omf_browse .\output\ac_hal.crf --depend .\output\ac_hal.d)
+F (..\src\AC\src\ac_hal.c)(0x5677F4CB)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB100__ -DZC_MODULE_DEV -DZC_EASY_UART -o .\output\ac_hal.o --list_dir ".\\output\\" --list --omf_browse .\output\ac_hal.crf --depend .\output\ac_hal.d)
 I (..\src\ZC\inc\zc\zc_common.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
-I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x5652C897)
-I (..\src\AC\inc\ac_api.h)(0x5646AC6A)
-I (..\src\AC\inc\ac_hal.h)(0x55E3D3F5)
-I (..\src\AC\inc\ac_cfg.h)(0x55F02A39)
+I (..\src\ZC\inc\zc\zc_protocol_interface.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_message_queue.h)(0x55FD16A0)
+I (..\src\ZC\inc\zc\zc_sec_engine.h)(0x55C997E3)
+I (..\src\ZC\inc\tropicssl\rsa.h)(0x55C997E3)
+I (..\src\ZC\inc\tropicssl\bignum.h)(0x55C997E3)
+I (..\src\ZC\inc\zc\zc_cloud_event.h)(0x55FD16A0)
+I (..\src\ZC\inc\zc\zc_client_manager.h)(0x55C997E3)
+I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
+I (..\src\ZC\inc\zc\zc_configuration.h)(0x56739869)
+I (..\src\ZC\inc\zc\zc_bc.h)(0x55C997E3)
+I (..\src\AC\inc\ac_api.h)(0x5677E314)
+I (..\src\AC\inc\ac_hal.h)(0x5677F475)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
+I (..\src\AC\inc\ac_cfg.h)(0x5677C221)
+I (..\src\ZC\inc\zc\zc_module_interface.h)(0x55F6A3D1)

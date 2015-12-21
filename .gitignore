@@ -10,4 +10,4 @@
 *.tmp
 *.lib
 si/*
-!/sdk/1.30/libs.rar
+!/sdk/1.50/libs.rar

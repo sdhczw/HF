@@ -740,6 +740,18 @@ void HF_Sleep()
     g_struUartBuffer.u32RecvLen = 0;
 }
 
+/*************************************************
+* Function: AC_UartSend
+* Description: 
+* Author: cxy 
+* Returns: 
+* Parameter: 
+* History:
+*************************************************/
+void AC_UartSend(u8* inBuf, u32 datalen)
+{
+     hfuart_send(HFUART0,(char*)inBuf,datalen,1000); 
+}
 /******************************* FILE END ***********************************/
 
 

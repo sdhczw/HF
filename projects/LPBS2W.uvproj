@@ -359,7 +359,7 @@
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls>--diag_suppress=494  --c99</MiscControls>
-              <Define>__KEIL_MDK__ ZC_MODULE_VERSION=0 ZC_MODULE_TYPE=1 __LPB100__ ZC_MODULE_DEV</Define>
+              <Define>__KEIL_MDK__ ZC_MODULE_VERSION=0 ZC_MODULE_TYPE=1 __LPB100__ ZC_MODULE_DEV ZC_EASY_UART</Define>
               <Undefine></Undefine>
               <IncludePath>../sdk/1.50/include/;..\src\ZC\inc\\aes;..\src\ZC\inc\tropicssl;..\src\ZC\inc\zc;..\src;..\src\AC\inc</IncludePath>
             </VariousControls>

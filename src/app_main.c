@@ -238,8 +238,25 @@ const int hf_gpio_fid_to_pid_map_table[HFM_MAX_FUNC_CODE]=
 #error "invalid project !you must define module type(__LPB100__,__LPT100__,_LPT200__)"
 #endif
 
+static int lver(pat_session_t s,int argc,char *argv[],char *rsp,int len)
+{
+u8 u8WifiVerSion[4] ={0};
+    u8WifiVerSion[0] = (u8)(ZC_MODULE_VERSION >> 16);
+    u8WifiVerSion[1] = (u8)(ZC_MODULE_VERSION >> 8);
+    u8WifiVerSion[2] = (u8)(ZC_MODULE_VERSION);
+    sprintf(rsp,"{\"Type\":\"%s\",\"Verion\":\"%d.%d.%d\",\"BuildTime\":\"%s %s\"}\r\n",
+                  hfsys_get_sdk_version(),
+                  u8WifiVerSion[0],
+                  u8WifiVerSion[1],
+                  u8WifiVerSion[2],
+                  __TIME__,__DATE__);
+	return 0;
+
+}
+
 const hfat_cmd_t user_define_at_cmds_table[]=
 {
+    {"LVER", lver, "   AT+LVER\r\n", NULL},
     {NULL,NULL,NULL,NULL} //the last item must be null
 };
 #if 0
@@ -364,7 +381,11 @@ static int hfsys_event_callback( uint32_t event_id,void * param)
   
 static int USER_FUNC uart_recv_callback(uint32_t event,char *data,uint32_t len,uint32_t buf_len) 
 {
-    ZC_Moudlefunc((u8*)data,len);
+#ifdef ZC_EASY_UART 
+    AC_UartRecv((u8 *)data, len);  
+#else
+    ZC_Moudlefunc((u8 *)data, len);
+#endif
     return len; 
 } 
 
