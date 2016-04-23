@@ -470,7 +470,6 @@ u32 HF_ConnectToCloud(PTC_Connection *pstruConnection)
         retval = hfnet_gethostbyname((const char *)g_struZcConfigDb.struCloudInfo.u8CloudAddr, &struIp);
     }
 
-
     if (HF_SUCCESS != retval)
     {
         return ZC_RET_ERROR;
@@ -675,9 +674,11 @@ void HF_Init()
     g_struHfAdapter.pfunFree = hfmem_free;
     g_struHfAdapter.pfunPrintf = HF_Printf;
     g_u16TcpMss = 1000;
+
     PCT_Init(&g_struHfAdapter);
-    
-    ZC_Printf("MT Init\n");
+    PCT_SetLocalLevel(PCT_LOCAL_DYNAMIC_TOKEN);  /* set PCT_LOCAL_DYNAMIC_TOKEN as default */
+
+    ZC_Printf("HF Init\n");
     
     g_struUartBuffer.u32Status = MSG_BUFFER_IDLE;
     g_struUartBuffer.u32RecvLen = 0;
