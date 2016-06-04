@@ -22,6 +22,7 @@
 
 extern PTC_ProtocolCon  g_struProtocolController;
 PTC_ModuleAdapter g_struHfAdapter;
+extern ZC_LanConfigInfo g_struLanInfo;
 
 MSG_Buffer g_struRecvBuffer;
 MSG_Buffer g_struRetxBuffer;
@@ -64,7 +65,22 @@ void HF_ReadDataFromFlash(u8 *pu8Data, u16 u16Len)
     hfuflash_read(0, (char *)(pu8Data), u16Len);
 #endif 
 }
-
+/*************************************************
+* Function: HF_ReadLicenseFromFlash
+* Description: 
+* Author: cxy 
+* Returns: 
+* Parameter: 
+* History:
+*************************************************/
+void HF_ReadLicenseFromFlash(u8 *pu8Data, u16 u16Len) 
+{
+#ifdef __LPT200__
+    hffile_userbin_read(HFFLASH_PAGE_SIZE, (char *)(pu8Data), u16Len);
+#else
+    hfuflash_read(HFFLASH_PAGE_SIZE, (char *)(pu8Data), u16Len);
+#endif 
+}
 /*************************************************
 * Function: HF_WriteDataToFlash
 * Description: 
@@ -82,7 +98,23 @@ void HF_WriteDataToFlash(u8 *pu8Data, u16 u16Len)
     hfuflash_write(0, (char*)pu8Data, u16Len);
 #endif 
 }
-
+/*************************************************
+* Function: HF_WriteLicenseToFlash
+* Description: 
+* Author: cxy 
+* Returns: 
+* Parameter: 
+* History:
+*************************************************/
+void HF_WriteLicenseToFlash(u8 *pu8Data, u16 u16Len)
+{
+#ifdef __LPT200__
+    hffile_userbin_write(HFFLASH_PAGE_SIZE, (char*)pu8Data, u16Len);
+#else
+    hfuflash_erase_page(HFFLASH_PAGE_SIZE, 1); 
+    hfuflash_write(HFFLASH_PAGE_SIZE, (char*)pu8Data, u16Len);
+#endif     
+}
 /*************************************************
 * Function: HF_timer_callback
 * Description: 
@@ -295,7 +327,9 @@ USER_FUNC static void HF_CloudRecvfunc(void* arg)
         FD_ZERO(&fdread);
 
         FD_SET(g_Bcfd, &fdread);
+        FD_SET(g_struLanInfo.fd, &fdread);
         u32MaxFd = u32MaxFd > g_Bcfd ? u32MaxFd : g_Bcfd;
+        u32MaxFd = u32MaxFd > g_struLanInfo.fd ? u32MaxFd : g_struLanInfo.fd;
 
         if (PCT_INVAILD_SOCKET != g_struProtocolController.struClientConnection.u32Socket)
         {
@@ -407,6 +441,17 @@ USER_FUNC static void HF_CloudRecvfunc(void* arg)
                 ZC_SendClientQueryReq(g_u8BcSendBuffer, (u16)s32RecvLen);
             } 
         }
+
+        if (FD_ISSET(g_struLanInfo.fd, &fdread))
+        {
+            tmp = sizeof(addr); 
+            s32RecvLen = recvfrom(g_struLanInfo.fd, g_u8recvbuffer, HF_MAX_SOCKET_LEN, 0, (struct sockaddr *)&addr, (socklen_t*)&tmp);
+            if (s32RecvLen > 0)
+            {
+                 ZC_Printf("Udp Client ip= 0x%x\n",addr.sin_addr.s_addr);
+                 ZC_HandleLanMsg((u8*)&addr, g_u8recvbuffer, s32RecvLen);
+            }           
+        }  
         
     } 
 }
@@ -598,6 +643,28 @@ void HF_BcInit()
 }
 
 /*************************************************
+* Function: HF_AuthUdpInit
+* Description: 
+* Author: cxy 
+* Returns: 
+* Parameter: 
+* History:
+*************************************************/
+void HF_AuthUdpInit(void)
+{
+    struct sockaddr_in addr; 
+
+    addr.sin_family = AF_INET; 
+    addr.sin_port = htons(ZC_AUTH_PORT); 
+    addr.sin_addr.s_addr = htonl(INADDR_ANY);
+
+    g_struLanInfo.fd = socket(AF_INET, SOCK_DGRAM, 0); 
+
+    bind(g_struLanInfo.fd, (struct sockaddr*)&addr, sizeof(addr)); 
+
+    return;
+}
+/*************************************************
 * Function: HF_Cloudfunc
 * Description: 
 * Author: cxy 
@@ -611,6 +678,7 @@ USER_FUNC static void HF_Cloudfunc(void* arg)
     u32 u32Timer = 0;
 
     HF_BcInit();
+    HF_AuthUdpInit();
 
     while(1) 
     {
@@ -665,7 +733,9 @@ void HF_Init()
     //存储类接口
     g_struHfAdapter.pfunUpdateFinish = HF_FirmwareUpdateFinish;
     g_struHfAdapter.pfunWriteFlash = HF_WriteDataToFlash;
+    g_struHfAdapter.pfunWriteLicense = HF_WriteLicenseToFlash;
     g_struHfAdapter.pfunReadFlash = HF_ReadDataFromFlash;
+    g_struHfAdapter.pfunReadLicense = HF_ReadLicenseFromFlash;
     //系统类接口    
     g_struHfAdapter.pfunRest = HF_Rest;    
     g_struHfAdapter.pfunGetMac = HF_GetMac;
