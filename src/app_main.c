@@ -381,16 +381,11 @@ static int hfsys_event_callback( uint32_t event_id,void * param)
   
 static int USER_FUNC uart_recv_callback(uint32_t event,char *data,uint32_t len,uint32_t buf_len) 
 {  
-#if 0
 #ifdef ZC_EASY_UART 
     AC_UartRecv((u8 *)data, len);  
 #else
     ZC_Moudlefunc((u8 *)data, len);
 #endif
-#endif
-
-    AC_UartRecv((u8 *)data, len);  
-
     return len; 
 } 
 
