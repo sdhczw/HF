@@ -175,7 +175,7 @@ I (..\src\ZC\inc\zc\zc_timer.h)(0x55C997E3)
 I (..\src\ZC\inc\zc\zc_configuration.h)(0x5769FF5D)
 I (..\src\ZC\inc\zc\zc_bc.h)(0x5769FF5D)
 I (..\src\ZC\inc\zc\zc_module_interface.h)(0x57109D39)
-F (..\src\ZC\src\zc\zc_protocol_controller.c)(0x5769FF5D)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB105__ -DZC_MODULE_DEV -o .\output\zc_protocol_controller.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_protocol_controller.crf --depend .\output\zc_protocol_controller.d)
+F (..\src\ZC\src\zc\zc_protocol_controller.c)(0x576A0E13)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB105__ -DZC_MODULE_DEV -o .\output\zc_protocol_controller.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_protocol_controller.crf --depend .\output\zc_protocol_controller.d)
 I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5769FF5D)
 I (..\src\ZC\inc\zc\zc_common.h)(0x5769FF5D)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)
@@ -296,7 +296,7 @@ I (d:\Keil_v5\ARM\ARMCC\include\assert.h)(0x52FDD27E)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x52FDD27E)
 I (..\src\ZC\inc\\aes\aes.h)(0x55C997E3)
 I (..\src\ZC\inc\\aes\aes_locl.h)(0x55C997E3)
-F (..\src\zc_hf_adpter.c)(0x576928F1)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB105__ -DZC_MODULE_DEV -o .\output\zc_hf_adpter.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_hf_adpter.crf --depend .\output\zc_hf_adpter.d)
+F (..\src\zc_hf_adpter.c)(0x576A0D1F)(-c --cpu Cortex-M3 --li -g -O2 --apcs=interwork --split_sections --enum_is_int --asm --interleave --asm_dir ".\\output\\" -I../sdk/1.50/include/ -I..\src\ZC\inc\\aes -I..\src\ZC\inc\tropicssl -I..\src\ZC\inc\zc -I..\src -I..\src\AC\inc --diag_suppress=494  --c99-I d:\Keil_v5\ARM\RV31\INC-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include-D__KEIL_MDK__ -DZC_MODULE_VERSION="0" -DZC_MODULE_TYPE="1" -D__LPB105__ -DZC_MODULE_DEV -o .\output\zc_hf_adpter.o --list_dir ".\\output\\" --list --omf_browse .\output\zc_hf_adpter.crf --depend .\output\zc_hf_adpter.d)
 I (..\src\ZC\inc\zc\zc_protocol_controller.h)(0x5769FF5D)
 I (..\src\ZC\inc\zc\zc_common.h)(0x5769FF5D)
 I (..\src\ZC\inc\zc\zc_module_config.h)(0x55E53DD7)

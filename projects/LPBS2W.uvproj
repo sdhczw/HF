@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>LPB105S2W</TargetName>
+      <TargetName>LPBS2W</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
@@ -45,7 +45,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\output\</OutputDirectory>
-          <OutputName>LPB105S2W</OutputName>
+          <OutputName>LPBS2W</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -76,8 +76,8 @@
           <AfterMake>
             <RunUserProg1>1</RunUserProg1>
             <RunUserProg2>1</RunUserProg2>
-            <UserProg1Name>fromelf.exe --bin --output ./output/LPB105S2W.bin ./output/LPB105S2W.axf</UserProg1Name>
-            <UserProg2Name>../tools/LPB100_IMG_TOOLS/LPB100_IMG_Tools.exe ./output/LPB105S2W.bin ./output/LPB105S2W_UPGARDE.bin</UserProg2Name>
+            <UserProg1Name>fromelf.exe --bin --output ./output/LPBS2W.bin ./output/LPBS2W.axf</UserProg1Name>
+            <UserProg2Name>../tools/LPB100_IMG_TOOLS/LPB100_IMG_Tools.exe ./output/LPBS2W.bin ./output/LPBS2W_UPGARDE.bin</UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
           </AfterMake>
@@ -167,10 +167,10 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4099</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>0</bUseTDR>
-          <Flash2>Segger\JL2CM3.dll</Flash2>
+          <Flash2>BIN\UL2CM3.DLL</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4>.\ausdk_download.ini</Flash4>
           <pFcarmOut></pFcarmOut>
@@ -359,7 +359,7 @@
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls>--diag_suppress=494  --c99</MiscControls>
-              <Define>__KEIL_MDK__ ZC_MODULE_VERSION=0 ZC_MODULE_TYPE=1 __LPB105__ ZC_MODULE_DEV</Define>
+              <Define>__KEIL_MDK__ ZC_MODULE_VERSION=0 ZC_MODULE_TYPE=1 __LPB100__ ZC_MODULE_DEV</Define>
               <Undefine></Undefine>
               <IncludePath>../sdk/1.50/include/;..\src\ZC\inc\\aes;..\src\ZC\inc\tropicssl;..\src\ZC\inc\zc;..\src;..\src\AC\inc</IncludePath>
             </VariousControls>
