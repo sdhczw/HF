@@ -432,6 +432,7 @@ int USER_FUNC app_main (void)
         msleep(50);
     }    
     HF_Init();
+    AC_Init();
     
     hfsys_register_system_event( (hfsys_event_callback_t)hfsys_event_callback);
     
