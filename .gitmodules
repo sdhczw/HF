@@ -1,6 +1,6 @@
 [submodule "src/ZC"]
 	path = src/ZC
-	url = git@github.com:sdhczw/ZC.git
+	url = git@git.ablecloud.cn:c/zc.git
 [submodule "src/AC"]
 	path = src/AC
-	url = https://github.com/sdhczw/AC.git
+	url = git@git.ablecloud.cn:c/ac.git
