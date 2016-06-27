@@ -313,7 +313,8 @@ USER_FUNC static void HF_CloudRecvfunc(void* arg)
     struct sockaddr_in addr;
     int tmp=1;    
     s32 s32ret = 0;
-
+    ZC_SecHead *struHead = NULL;
+    u16 u16Len = 0;
     
     while(1) 
     {
@@ -373,21 +374,47 @@ USER_FUNC static void HF_CloudRecvfunc(void* arg)
         {
             if (FD_ISSET(g_struProtocolController.struCloudConnection.u32Socket, &fdread))
             {
-                s32RecvLen = recv(g_struProtocolController.struCloudConnection.u32Socket, g_u8recvbuffer, HF_MAX_SOCKET_LEN, 0); 
-                
-                if(s32RecvLen > 0) 
+                do 
                 {
-                    ZC_Printf("recv data len = %d\n", s32RecvLen);
-                    MSG_RecvDataFromCloud(g_u8recvbuffer, s32RecvLen);
-                }
-                else
-                {
-                    ZC_Printf("recv error, len = %d\n",s32RecvLen);
-                    PCT_DisConnectCloud(&g_struProtocolController);
-                    
-                    g_struUartBuffer.u32Status = MSG_BUFFER_IDLE;
-                    g_struUartBuffer.u32RecvLen = 0;
-                }
+                    s32RecvLen = recv(g_struProtocolController.struCloudConnection.u32Socket, g_u8recvbuffer, sizeof(ZC_SecHead), 0); 
+
+                    if (sizeof(ZC_SecHead) == s32RecvLen)
+                    {
+                        struHead = (ZC_SecHead *)g_u8recvbuffer;
+                        u16Len = ZC_HTONS(struHead->u16TotalMsg);
+                    }
+                    else
+                    {
+                        ZC_Printf("recv error part1, len = %d\n",s32RecvLen);
+                        PCT_DisConnectCloud(&g_struProtocolController);
+                        g_struUartBuffer.u32Status = MSG_BUFFER_IDLE;
+                        g_struUartBuffer.u32RecvLen = 0;
+                        break;
+                    }
+                    if (0 == u16Len)
+                    {
+                        ZC_Printf("recv data len = %d\n", s32RecvLen);
+                        MSG_RecvDataFromCloud(g_u8recvbuffer, sizeof(ZC_SecHead));
+                    }
+                    else 
+                    {
+                        s32RecvLen = recv(g_struProtocolController.struCloudConnection.u32Socket, g_u8recvbuffer + sizeof(ZC_SecHead), u16Len, 0); 
+
+                        if (s32RecvLen == (s32)u16Len)
+                        {
+                            ZC_Printf("recv data len = %d\n", s32RecvLen + sizeof(ZC_SecHead));
+                            MSG_RecvDataFromCloud(g_u8recvbuffer, s32RecvLen + sizeof(ZC_SecHead));
+                        }
+                        else
+                        {
+                            ZC_Printf("recv error part2, len = %d\n",s32RecvLen);
+                            PCT_DisConnectCloud(&g_struProtocolController);
+                            
+                            g_struUartBuffer.u32Status = MSG_BUFFER_IDLE;
+                            g_struUartBuffer.u32RecvLen = 0;                    
+                        }
+                    }
+                }while(0);
             }
             
         }
@@ -421,14 +448,18 @@ USER_FUNC static void HF_CloudRecvfunc(void* arg)
             {
                 connfd = accept(g_struProtocolController.struClientConnection.u32Socket,(struct sockaddr *)&cliaddr,&u32Len);
 
-                if (ZC_RET_ERROR == ZC_ClientConnect((u32)connfd))
+                if (connfd >= 0)
                 {
-                    close(connfd);
+                    if (ZC_RET_ERROR == ZC_ClientConnect((u32)connfd))
+                    {
+                        close(connfd);
+                    }
+                    else
+                    {
+                        ZC_Printf("accept client = %d\n", connfd);
+                    }
                 }
-                else
-                {
-                    ZC_Printf("accept client = %d\n", connfd);
-                }
+
             }
         }
 
